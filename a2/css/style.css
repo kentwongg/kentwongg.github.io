@@ -1,0 +1,75 @@
+/* KENT WONG, 00318833, Tutorial B05 */
+/* select everything */
+body {
+    /* dont have pad or margins */
+    padding: 0;
+    margin: 0;
+    background: rgb(189,0,255) /* bg cyber punk color lel */
+}
+
+/* just select everything
+the ::after is a psuedo elem. allows us to inserrt stuff into a page
+without it having to be HTML. psuedo dom.
+trick sourced from: https://css-tricks.com/almanac/selectors/a/after-and-before/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive; /* google font; retro arcade style */
+    font-weight: normal;
+}
+
+/* calculator body; should note that its important we justify and align for flex
+that's the "magic" that makes the calc look good */
+.calc-body {
+    display: grid; /* use grid NOT a table */
+    grid-template-columns: repeat(4, 100px); /* have 4 columns and 100px width */
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px); /*min max pushes the input display at a min of 100 but allows it to max out as large as it needs tro be   */
+    min-height: 100vh; /* view height */
+    justify-content: center; /* aligns flex items */
+    align-content: center; /* aligns extra stuff within flex container */
+}
+/* add hover color */
+.calc-body > button:hover {
+    background-color: rgb(157, 255, 198);
+}
+
+.lol-text { /* flavor text */
+    color: rgba(0,255,159, 0.9);
+    display: flex;
+    align-items: flex-end;
+    height: 50%;
+}
+
+.calc-body > button {
+    border: 1px solid rgba(214,0,255, 0.3);;
+    background-color: rgba(185, 185, 201, .5); /* RGB +Alpha Channel Model: grey blue with opacity */
+    outline: rgba(0,255,159, 0.9);
+    font-size: 100%;
+
+}
+/* for previous operands */
+.calc-output .prev-op {
+    color: rgba(0,184,255, 0.9);
+    font-size: 90%
+}
+/* for current operands */
+.calc-output .curr-op {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 150%; /* make curr operand bigger */ 
+}
+/* anything we see; should note that its flex */
+.calc-output {
+    display: flex;
+    align-items: flex-end;
+    word-wrap: break-word; /* allows break in middle or arbitrarily anywhere */
+    justify-content: space-around;
+    grid-column: 1 / -1; /* -1 goes to the very end */
+    background-color: rgba(0,30,255.9);
+
+}
+/* grid-column is SHORT for grid-column-start and grid-column-end
+spec start and end within grid col
+doc source from https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column */
+.span-two {
+    grid-column: span 2;
+}

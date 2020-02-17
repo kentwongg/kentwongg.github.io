@@ -1,0 +1,36 @@
+/* KENT WONG, 00318833, Tutorial B05 */
+
+.singlepic {
+    float: right;
+    width: 33%;
+}
+
+.galleryframe {
+    font-family: 'Libre Baskerville', serif; /* google font */
+    margin: 0px;
+    padding: 0px;
+    color: rgb(221, 144, 0);
+    font-size: 26px;
+    font-style: italic;
+}
+
+div.gallery img {
+    width: 90%;
+    height: 90%;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.row {
+
+    width: 75%;
+    height: auto;
+    padding-top: 10%;   /* centre vert. pos val */
+    display: flex;
+    align-items: left;
+    margin: 0 auto;
+}
+.pic1 {width: 85%} /* set width for class pic1 */
+.name-column {width: 20%;}
+.picture-column {width: 90%;}

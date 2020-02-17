@@ -1,0 +1,33 @@
+/* KENT WONG, 00318833, Tutorial B05 */
+
+p {
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+body {
+    font-family: 'Libre Baskerville', serif; /* google font */
+    height: 100%;       /* reg height */
+    width: 99%;         /* force width 99% */
+}
+
+.sec1 {width: 95%;} /* set width for class sec1 */
+.pic1 {width: 85%} /* set width for class pic1 */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+
+    width: 50%;
+    height: auto;
+    padding-top: 10%;   /* centre vert. pos val */
+    display: flex;
+    align-items: left;
+    margin: 0 auto;
+}
+
+/* set 0s for pad and margin */
+p, h1 {margin: 0px;padding: 0px;}

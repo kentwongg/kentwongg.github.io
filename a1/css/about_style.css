@@ -1,0 +1,42 @@
+/* KENT WONG, 00318833, Tutorial B05 */
+
+
+body {
+    font-family: 'Libre Baskerville', serif; /* google font */
+    height: 100%;       /* reg height */
+    width: 99%;         /* force width 99% */
+}
+
+.sec1 {
+    width: 100%;
+    padding-bottom: -30%;
+} 
+
+.pic1 { /* Sets the position for profile pic */
+    width: 35%;
+    align-items: left;
+    padding-right: 30%;
+    padding-top: 15%;
+    }
+
+img { /* adjust h and w for main profile image */
+    width: 100%;
+    height: auto;
+}
+
+
+.row { /* css styling for row parts */ 
+
+    width: 70%;
+    height: auto;
+    padding-top: 10%;   /* center vertical position value */
+    display: flex;
+    align-items: left;
+    margin: 0 auto;
+}
+
+/* set 0s for pad and margin */
+p, h1 {
+    margin: 0px;
+    padding: 0px;
+}
